@@ -1,0 +1,33 @@
+<div *ngIf="shoppingLists">
+    <h3>{{ shoppingLists.author }}</h3>
+    <div>
+        Author:
+        <input class="form-control" [(ngModel)]="shoppingLists.author" placeholder="Author" />
+    </div>
+
+    <div>
+        Created Date
+        <input class="form-control" [(ngModel)]="shoppingLists.createdDate" type="date" placeholder="Created Date" />
+    </div>
+
+    <div>
+        SuperMarketId:
+        <input class="form-control" [(ngModel)]="shoppingLists.superMarketId" placeholder="SuperMarketId" />
+    </div>
+
+    <div>
+        BrandId:
+        <input class="form-control" [(ngModel)]="shoppingLists.brandId" placeholder="BrandId" />
+    </div>
+
+    <div>
+        ProductID:
+        <input class="form-control" [(ngModel)]="shoppingLists.productId" placeholder="productId" />
+    </div>
+    <div>
+
+        <button class="btn btn-primary" (click)="updateShoppingList(shoppingLists)" *ngIf="shoppingLists.id">Save</button>
+        <button class="btn btn-danger" (click)="deleteShoppingList(shoppingLists)" *ngIf="shoppingLists.id">Delete</button>
+        <button class="btn btn-success" (click)="createShoppingList(shoppingLists)" *ngIf="!shoppingLists.id">Create</button>
+    </div>
+</div>

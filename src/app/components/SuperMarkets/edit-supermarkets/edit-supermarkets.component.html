@@ -1,0 +1,23 @@
+<div *ngIf="superMarkets">
+    <h2>{{ superMarkets.name }}</h2>
+    <div>
+        Name:
+        <input class="form-control" [(ngModel)]="superMarkets.name" placeholder="Name" />
+    </div>
+
+    <div>
+        ProductId:
+        <input class="form-control" [(ngModel)]="superMarkets.productId" placeholder="ProductId" />
+    </div>
+
+    <div>
+        BrandId
+        <input class="form-control" [(ngModel)]="superMarkets.brandId" placeholder="BrandId" />
+    </div>
+    <div>
+
+        <button class="btn btn-primary" (click)="updateSuperMarkets(superMarkets)" *ngIf="superMarkets.id">Save</button>
+        <button class="btn btn-danger" (click)="deleteSuperMarkets(superMarkets)" *ngIf="superMarkets.id">Delete</button>
+        <button class="btn btn-success" (click)="createSuperMarket(superMarkets)" *ngIf="!superMarkets.id">Create</button>
+    </div>
+</div>

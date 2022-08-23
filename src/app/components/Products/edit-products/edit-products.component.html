@@ -1,0 +1,28 @@
+<div *ngIf="product">
+    <h2>{{ product.name }}</h2>
+    <div>
+        Name:
+        <input class="form-control" [(ngModel)]="product.name" placeholder="Name" />
+    </div>
+
+    <div>
+        Price:
+        <input class="form-control" [(ngModel)]="product.price" placeholder="Price" />
+    </div>
+
+    <div>
+        SuperMarketId:
+        <input class="form-control" [(ngModel)]="product.superMarketId" placeholder="SuperMarketId:" />
+    </div>
+
+    <div>
+        ProductID:
+        <input class="form-control" [(ngModel)]="product.brandId" placeholder="productId" />
+    </div>
+    <div>
+
+        <button class="btn btn-primary" (click)="updateProduct(product)" *ngIf="product.id">Save</button>
+        <button class="btn btn-danger" (click)="deleteProduct(product)" *ngIf="product.id">Delete</button>
+        <button class="btn btn-success" (click)="createProduct(product)" *ngIf="!product.id">Create</button>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<button class="btn btn-success" (click)="initNewProduct()">Create Product</button>
+
+<table class="table table-hover">
+  <thead>
+    <th scope="col">Id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Price</th>
+    <th scope="col"></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td><button class="btn btn-warning" (click)="editProduct(product)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<app-edit-products [product]="productToEdit" (productsUpdated)="updateProductList($event)"></app-edit-products>

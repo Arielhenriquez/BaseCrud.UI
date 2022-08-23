@@ -1,0 +1,22 @@
+<button class="btn btn-success" (click)="initNewShoppingList()">Create ShoppingList</button>
+
+<table class="table table-hover">
+    <thead>
+        <th scope="col">Id</th>
+        <th scope="col">Author</th>
+        Date:<input type="date">
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let shoppingList of shoppingLists">
+            <td>{{shoppingList.id}}</td>
+            <td>{{shoppingList.author}}</td>
+            <td>{{shoppingList.createdDate}}</td>
+            <td><button class="btn btn-warning" (click)="editShoppingList(shoppingList)">Edit</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<app-edit-shoppinglist [shoppingLists]="shoppingToEdit" (shoppingListUpdated)="editShoppingList($event)">
+</app-edit-shoppinglist>

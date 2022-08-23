@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+header {
+    color: #1281f1 !important;
+}
+
+div .bg-light {
+    background-color: #1281f1 !important;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    background-color: #1281f1 !important;
+}
+
+.navbar-light .navbar-brand {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.btn-success {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    margin-right: 10px;
+}
+
+.form-control {
+    width: 30%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
